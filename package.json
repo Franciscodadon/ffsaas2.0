@@ -1,0 +1,14 @@
+{
+  "name": "flow-fusion-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Flow Fusion marketing site - static single page, buildable into a GoHighLevel custom-code embed.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "placeholder": "node scripts/make-placeholder.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

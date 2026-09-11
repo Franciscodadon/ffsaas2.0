@@ -1,0 +1,4 @@
+# Build outputs (index.html and dist/) are intentionally committed.
+node_modules/
+.DS_Store
+screenshots/
