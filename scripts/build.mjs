@@ -3,7 +3,7 @@
 //   src/site.js                                    -> dist/site.js
 //   src/site.html (+ wrapper)                       -> index.html      (standalone page)
 //   <style> + fragment + <script>, logo inlined     -> dist/ghl-embed.html (paste into a GHL custom-code block)
-import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync, rmSync, cpSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, relative } from 'node:path';
 
@@ -88,3 +88,13 @@ console.log(`Build complete (logo: ${logoPath})`);
 for (const f of ['dist/styles.css', 'dist/site.js', 'index.html', 'dist/ghl-embed.html']) {
   console.log(`  ${relative(ROOT, p(f)).padEnd(22)} ${fmt(statSync(p(f)).size)}`);
 }
+
+// --- public/ (static deploy folder for Vercel / Netlify / any static host) ---
+rmSync(p('public'), { recursive: true, force: true });
+mkdirSync(p('public/dist'), { recursive: true });
+mkdirSync(p('public/assets'), { recursive: true });
+writeFileSync(p('public/index.html'), indexHtml);
+cpSync(p('dist/styles.css'), p('public/dist/styles.css'));
+cpSync(p('dist/site.js'), p('public/dist/site.js'));
+cpSync(p(logoPath), p(`public/${logoPath}`));
+console.log('  public/                deploy folder (index.html, dist/, assets/)');

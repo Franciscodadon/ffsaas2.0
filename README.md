@@ -83,3 +83,7 @@ If a price or allowance changes, update both, then rebuild.
 - A "Skip to content" link is the first focusable element and becomes visible on focus.
 - The mobile navigation menu closes on Escape (returning focus to the toggle) and on clicks outside it. The plan dialog is a native `<dialog>`, so Escape closes it; clicking the backdrop closes it too.
 - In-page links move focus to their target section, and all interactive elements have a visible focus ring.
+
+## Deploying to Vercel
+
+The repo includes a `vercel.json` that tells Vercel to run `npm run build` and serve the `public/` folder it produces. Import the GitHub repo in Vercel, set the production branch to the branch you want live (currently `claude/zen-sagan-xnyaf3`), and deploy. No framework preset or environment variables are needed. Every push to that branch redeploys automatically, so tweaks go live on the domain within a minute or two.
