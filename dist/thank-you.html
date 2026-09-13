@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Flow Fusion</title>
+  <meta name="description" content="Your Flow Fusion subscription is active. Watch the welcome walkthrough and choose your onboarding path.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="dist/styles.css">
+  <style>html,body{margin:0;background:#08090b}</style>
+</head>
+<body>
+<div id="ff-site" class="ff-checkout-page ff-thanks-page">
+  <a class="ff-skip" href="#ff-main">Skip to content</a>
+  <header class="ff-nav">
+    <div class="ff-container ff-nav-inner">
+      <a class="ff-wordmark ff-logo-lockup" href="./" aria-label="Flow Fusion home"><span class="ff-brand-symbol" aria-hidden="true"><img src="assets/logo.png" alt="" width="1904" height="1967"></span><span class="ff-brand-name">FLOW FUSION<small>AUTOMATION MADE SIMPLE</small></span></a>
+      <nav class="ff-nav-links" aria-label="Main navigation" id="ff-menu"><a href="./#ff-product">The platform</a><a href="./#ff-pricing">Pricing</a><a href="./#ff-faq">FAQ</a></nav>
+      <div class="ff-nav-actions"><a class="ff-btn ff-btn-small" href="./">Back to site</a></div>
+    </div>
+  </header>
+
+  <main id="ff-main" class="ff-container ff-thanks">
+    <header class="ff-thanks-head">
+      <p class="ff-kicker"><span class="ff-short-line"></span> YOU'RE IN</p>
+      <h1>Welcome to Flow Fusion.</h1>
+      <p class="ff-thanks-copy">Your subscription is active. Watch the short walkthrough below, then choose how you want to get set up.</p>
+    </header>
+
+    <div class="ff-thanks-video" aria-label="Welcome video">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/7dfbb866edea46c3b7558bf67860a8c2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen title="Flow Fusion welcome walkthrough" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+    </div>
+
+    <div class="ff-onboard-grid">
+      <article class="ff-onboard-card">
+        <span class="ff-pill">FREE</span>
+        <h2>Do It Yourself</h2>
+        <p>Move at your own pace using our step by step resource center.</p>
+        <ul>
+          <li>Access to the full resource center</li>
+          <li>Account setup documentation</li>
+          <li>Core CRM feature guides</li>
+          <li>Office hours group support — Mon–Fri, 12:00–1:00 PM EST</li>
+          <li>24/7 live chat support</li>
+        </ul>
+        <a class="ff-onboard-btn" href="#" data-onboard-link="diy">Log in to Flow Fusion and access the resource center</a>
+      </article>
+      <article class="ff-onboard-card">
+        <span class="ff-pill">$150 ONE-TIME</span>
+        <h2>Done For You</h2>
+        <p>Let our team build and optimize your account for you.</p>
+        <ul>
+          <li>Two dedicated one-on-one onboarding calls</li>
+          <li>Full account setup, done for you</li>
+          <li>A2P 10DLC registration handled</li>
+          <li>CRM optimized to fit your business</li>
+          <li>Office hours group support — Mon–Fri, 12:00–1:00 PM EST</li>
+          <li>24/7 live chat support</li>
+        </ul>
+        <a class="ff-onboard-btn" href="#" data-onboard-link="dfy">Get Done For You Onboarding</a>
+      </article>
+    </div>
+
+    <p class="ff-thanks-note">No matter which path you choose, we're always here. Office hours Mon–Fri 12–1 PM EST or reach us anytime via live chat.</p>
+  </main>
+
+  <footer class="ff-footer ff-container"><a class="ff-wordmark ff-logo-lockup" href="./" aria-label="Flow Fusion home"><span class="ff-brand-symbol" aria-hidden="true"><img src="assets/logo.png" alt="" width="1904" height="1967" loading="lazy"></span><span class="ff-brand-name">FLOW FUSION<small>AUTOMATION MADE SIMPLE</small></span></a><p>© <span data-year>2026</span> Flow Fusion</p><nav aria-label="Footer navigation"><a href="./#ff-product">The platform</a><a href="./#ff-pricing">Pricing</a><a href="./#ff-faq">FAQ</a></nav></footer>
+</div>
+<script>
+  // Set these to the real destinations. Empty values leave the buttons inert.
+  const onboardingLinks = { diy: '', dfy: '' };
+  document.querySelectorAll('[data-onboard-link]').forEach(a => {
+    const url = onboardingLinks[a.dataset.onboardLink];
+    if (url) a.href = url; else { a.setAttribute('aria-disabled', 'true'); a.addEventListener('click', e => e.preventDefault()); }
+  });
+  document.querySelectorAll('[data-year]').forEach(el => el.textContent = String(new Date().getFullYear()));
+</script>
+</body>
+</html>

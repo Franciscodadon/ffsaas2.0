@@ -91,3 +91,7 @@ The repo includes a `vercel.json` that tells Vercel to run `npm run build` and s
 ## Checkout pages
 
 Each plan has its own page at `/checkout/<plan>` (`core`, `starter`, `growth`, `scale`), generated at build time from `src/checkout/template.html` and `src/checkout/plans.json`. The "Choose ..." buttons on the pricing grid link to them. Put the GoHighLevel form embed for a plan in its `form` field in `plans.json` (the `<iframe ...>` only; the `form_embed.js` script is already on the page). A plan with an empty `form` shows a "checkout is almost ready" notice instead of a form.
+
+## Thank-you page
+
+`/thank-you` is the post-checkout page, built from `src/thank-you.html`: the Loom welcome video, then the Do It Yourself and Done For You onboarding cards. Set each GoHighLevel form's "on submit" redirect to `https://<your-domain>/thank-you`. The two card buttons read their destinations from the `onboardingLinks` object at the bottom of `src/thank-you.html`; until a URL is filled in, that button is inert.

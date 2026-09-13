@@ -281,6 +281,26 @@
 #ff-site .ff-form-pending{min-height:420px;display:grid;place-items:center;text-align:center;padding:40px;color:#3a4352;background:#f5f6f9;border-radius:8px}
 #ff-site .ff-form-pending strong{display:block;font-size:1.25rem;font-weight:500;color:#101216;margin-bottom:8px}
 #ff-site .ff-form-pending p{max-width:360px;line-height:1.7;font-size:.9375rem}
+
+/* Thank-you page */
+#ff-site .ff-thanks{padding-top:56px;padding-bottom:96px}
+#ff-site .ff-thanks-head{text-align:center;max-width:640px;margin:0 auto 36px}
+#ff-site .ff-thanks-head h1{font-size:clamp(2.4rem,4.5vw,3.6rem);letter-spacing:-.045em;line-height:1.05}
+#ff-site .ff-thanks-copy{color:#a0aabb;font-size:1.0625rem;line-height:1.7;margin-top:16px}
+#ff-site .ff-thanks-video{max-width:960px;margin:0 auto 56px;border:1px solid #303743;border-radius:12px;overflow:hidden;background:#10141b;box-shadow:0 20px 50px #0004,0 -24px 90px -50px #3b82f665}
+#ff-site .ff-onboard-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1000px;margin:0 auto}
+#ff-site .ff-onboard-card{background:#16191e;border:1px solid #23272f;border-radius:16px;padding:32px 32px 34px;display:flex;flex-direction:column}
+#ff-site .ff-pill{align-self:flex-start;font-size:.75rem;font-weight:600;letter-spacing:.08em;color:#7bacff;border:1px solid #3b6bd6;border-radius:999px;padding:5px 12px}
+#ff-site .ff-onboard-card h2{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;color:#4f8bff;margin-top:18px}
+#ff-site .ff-onboard-card>p{color:#9aa3b2;font-size:.9375rem;line-height:1.6;margin-top:8px}
+#ff-site .ff-onboard-card ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px;font-size:.9375rem;color:#e6e9ef}
+#ff-site .ff-onboard-card li{position:relative;padding-left:28px}
+#ff-site .ff-onboard-card li::before{content:"✓";position:absolute;left:0;top:0;color:#4f8bff;font-weight:700}
+#ff-site .ff-onboard-btn{display:flex;align-items:center;justify-content:center;margin-top:auto;padding-top:0;margin-top:34px;min-height:46px;border-radius:8px;border:1px solid #4a7dff;background:linear-gradient(90deg,#2f6bff 0%,#1f3d9a 60%,#0b0d14 100%);color:#fff;font-weight:600;font-size:.9375rem;text-align:center;padding:12px 18px;transition:filter .2s,transform .2s}
+#ff-site .ff-onboard-btn:hover{filter:brightness(1.12);transform:translateY(-1px)}
+#ff-site .ff-onboard-btn[aria-disabled="true"]{opacity:.7;cursor:not-allowed}
+#ff-site .ff-thanks-note{text-align:center;max-width:660px;margin:44px auto 0;color:#9aa3b2;font-size:.9375rem;line-height:1.7}
+@media(max-width:850px){#ff-site .ff-onboard-grid{grid-template-columns:1fr}#ff-site .ff-thanks{padding-top:40px;padding-bottom:64px}#ff-site .ff-onboard-card{padding:26px 22px 28px}}
 </style>
 <div id="ff-site">
   <a class="ff-skip" href="#ff-main">Skip to content</a>

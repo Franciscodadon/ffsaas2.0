@@ -138,3 +138,25 @@ ${body}
   checkoutPages.push(`checkout/${key}${plan.form ? '' : ' (form pending)'}`);
 }
 console.log(`  checkout pages         ${checkoutPages.join(', ')}`);
+
+// --- thank-you.html (post-checkout page) ---------------------------------
+const thanksFragment = read('src/thank-you.html').trim().split(LOGO_ATTR).join(`src="${logoPath}"`);
+const thanksHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Flow Fusion</title>
+  <meta name="description" content="Your Flow Fusion subscription is active. Watch the welcome walkthrough and choose your onboarding path.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="dist/styles.css">
+  <style>html,body{margin:0;background:#08090b}</style>
+</head>
+<body>
+${thanksFragment}
+</body>
+</html>
+`;
+writeFileSync(p('public/thank-you.html'), thanksHtml);
+writeFileSync(p('dist/thank-you.html'), thanksHtml);
+console.log('  thank-you              public/thank-you.html');
