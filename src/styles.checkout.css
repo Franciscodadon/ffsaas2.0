@@ -18,10 +18,10 @@
 #ff-site .ff-checkout-note a:hover{color:#fff;border-color:#7eafff}
 #ff-site .ff-checkout-form{border:1px solid #303743;border-radius:8px;background:#10141b;padding:24px 26px 26px;box-shadow:0 20px 50px #0002,0 -24px 90px -50px #3b82f665}
 #ff-site .ff-checkout-form .ff-visual-top{margin-bottom:18px}
-#ff-site .ff-form-frame{min-height:1024px;border-radius:8px;background:#f5f6f9}
+#ff-site .ff-form-frame{border-radius:8px;background:#f5f6f9}
 #ff-site .ff-form-frame iframe{display:block;min-height:1024px}
 @media(max-width:1100px){#ff-site .ff-checkout-layout{gap:44px}}
 @media(max-width:850px){#ff-site.ff-checkout-page .ff-nav-links{display:none}#ff-site .ff-checkout-layout{grid-template-columns:1fr;gap:40px;padding-top:40px;padding-bottom:64px}#ff-site .ff-checkout-summary{position:static}#ff-site .ff-checkout-form{padding:18px 16px 18px}}
-#ff-site .ff-form-pending{min-height:1024px;display:grid;place-items:center;text-align:center;padding:40px;color:#3a4352;background:#f5f6f9;border-radius:8px}
+#ff-site .ff-form-pending{min-height:420px;display:grid;place-items:center;text-align:center;padding:40px;color:#3a4352;background:#f5f6f9;border-radius:8px}
 #ff-site .ff-form-pending strong{display:block;font-size:1.25rem;font-weight:500;color:#101216;margin-bottom:8px}
 #ff-site .ff-form-pending p{max-width:360px;line-height:1.7;font-size:.9375rem}
