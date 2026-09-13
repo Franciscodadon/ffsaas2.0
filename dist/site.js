@@ -1,9 +1,9 @@
 /* Flow Fusion site behaviour. Scoped to #ff-site for GoHighLevel embedding.
-   Set these four URLs to the APPROVED GoHighLevel checkout links.
+   checkoutLinks: an https URL or a path relative to this page (e.g. 'checkout/core').
    Empty values deliberately show a preview notice and never charge a card. */
 (() => {
   'use strict';
-  const checkoutLinks = { core: '', starter: '', growth: '', scale: '' };
+  const checkoutLinks = { core: 'checkout/core', starter: 'checkout/starter', growth: 'checkout/growth', scale: 'checkout/scale' };
   const root = document.getElementById('ff-site');
   if (!root || root.dataset.initialized) return;
   root.dataset.initialized = 'true';
@@ -100,7 +100,7 @@
   root.querySelectorAll('[data-plan]').forEach(button => button.addEventListener('click', () => {
     const key = button.dataset.plan, plan = plans[key], url = checkoutLinks[key];
     if (!plan) return;
-    if(url) { try {const parsed = new URL(url); if(parsed.protocol==='https:') {window.location.assign(parsed.href);return;} } catch {} }
+    if(url) { try {const parsed = new URL(url, window.location.href); if(parsed.protocol==='https:' || parsed.origin===window.location.origin) {window.location.assign(parsed.href);return;} } catch {} }
     root.querySelector('#ff-checkout-title').textContent = plan.name;
     root.querySelector('.ff-dialog-price').textContent = `$${plan.price} / month`;
     root.querySelector('.ff-dialog-includes').textContent = plan.includes;

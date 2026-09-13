@@ -87,3 +87,7 @@ If a price or allowance changes, update both, then rebuild.
 ## Deploying to Vercel
 
 The repo includes a `vercel.json` that tells Vercel to run `npm run build` and serve the `public/` folder it produces. Import the GitHub repo in Vercel, set the production branch to the branch you want live (currently `claude/zen-sagan-xnyaf3`), and deploy. No framework preset or environment variables are needed. Every push to that branch redeploys automatically, so tweaks go live on the domain within a minute or two.
+
+## Checkout pages
+
+Each plan has its own page at `/checkout/<plan>` (`core`, `starter`, `growth`, `scale`), generated at build time from `src/checkout/template.html` and `src/checkout/plans.json`. The "Choose ..." buttons on the pricing grid link to them. Put the GoHighLevel form embed for a plan in its `form` field in `plans.json` (the `<iframe ...>` only; the `form_embed.js` script is already on the page). A plan with an empty `form` shows a "checkout is almost ready" notice instead of a form.

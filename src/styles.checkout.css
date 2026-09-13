@@ -1,0 +1,27 @@
+/* Checkout pages (/checkout/<plan>). Loaded after the base + section styles. */
+#ff-site.ff-checkout-page .ff-nav-links{display:flex}
+#ff-site.ff-checkout-page .ff-menu-toggle{display:none}
+#ff-site .ff-checkout-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start;padding-top:64px;padding-bottom:96px}
+#ff-site .ff-checkout-summary{position:sticky;top:112px}
+#ff-site .ff-checkout-summary h1{font-size:clamp(2.6rem,4.5vw,3.6rem);letter-spacing:-.045em;line-height:1.05}
+#ff-site .ff-checkout-fit{color:#a0aabb;font-size:1.0625rem;line-height:1.7;margin-top:14px;max-width:380px}
+#ff-site .ff-checkout-summary .ff-price{margin:26px 0 8px}
+#ff-site .ff-checkout-summary .ff-allowance{border-top:1px solid #30394a}
+#ff-site .ff-checkout-list{list-style:none;padding:22px 0 0;display:grid;gap:12px;font-size:.9375rem;color:#b6c1d3}
+#ff-site .ff-checkout-list li{position:relative;padding-left:20px}
+#ff-site .ff-checkout-list li::before{content:"✓";position:absolute;left:0;color:#789ecd;font-size:.8rem}
+#ff-site .ff-checkout-steps{margin-top:34px;padding:20px 22px;border:1px solid #2a3445;border-radius:6px;background:#12171f}
+#ff-site .ff-checkout-steps ol{margin:0;padding-left:20px;display:grid;gap:9px;font-size:.875rem;color:#aab5c8;line-height:1.6}
+#ff-site .ff-checkout-steps li::marker{color:#7fa9ee;font-family:monospace;font-size:.75rem}
+#ff-site .ff-checkout-note{margin-top:24px;font-size:.8125rem;color:#8f9db4;line-height:1.7}
+#ff-site .ff-checkout-note a{color:#a7caff;border-bottom:1px solid #3b6099}
+#ff-site .ff-checkout-note a:hover{color:#fff;border-color:#7eafff}
+#ff-site .ff-checkout-form{border:1px solid #303743;border-radius:8px;background:#10141b;padding:24px 26px 26px;box-shadow:0 20px 50px #0002,0 -24px 90px -50px #3b82f665}
+#ff-site .ff-checkout-form .ff-visual-top{margin-bottom:18px}
+#ff-site .ff-form-frame{min-height:1024px;border-radius:8px;background:#f5f6f9}
+#ff-site .ff-form-frame iframe{display:block;min-height:1024px}
+@media(max-width:1100px){#ff-site .ff-checkout-layout{gap:44px}}
+@media(max-width:850px){#ff-site.ff-checkout-page .ff-nav-links{display:none}#ff-site .ff-checkout-layout{grid-template-columns:1fr;gap:40px;padding-top:40px;padding-bottom:64px}#ff-site .ff-checkout-summary{position:static}#ff-site .ff-checkout-form{padding:18px 16px 18px}}
+#ff-site .ff-form-pending{min-height:1024px;display:grid;place-items:center;text-align:center;padding:40px;color:#3a4352;background:#f5f6f9;border-radius:8px}
+#ff-site .ff-form-pending strong{display:block;font-size:1.25rem;font-weight:500;color:#101216;margin-bottom:8px}
+#ff-site .ff-form-pending p{max-width:360px;line-height:1.7;font-size:.9375rem}

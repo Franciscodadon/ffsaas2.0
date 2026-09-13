@@ -15,7 +15,7 @@ const REAL_LOGO = 'assets/logo.png';
 const PLACEHOLDER_LOGO = 'assets/logo.placeholder.png';
 const LOGO_ATTR = 'src="assets/logo.png"';
 
-const css = read('src/styles.base.css').trimEnd() + '\n\n' + read('src/styles.sections.css').trimEnd() + '\n';
+const css = read('src/styles.base.css').trimEnd() + '\n\n' + read('src/styles.sections.css').trimEnd() + '\n\n' + read('src/styles.checkout.css').trimEnd() + '\n';
 const js = read('src/site.js');
 const fragment = read('src/site.html').trim();
 
@@ -98,3 +98,43 @@ cpSync(p('dist/styles.css'), p('public/dist/styles.css'));
 cpSync(p('dist/site.js'), p('public/dist/site.js'));
 cpSync(p(logoPath), p(`public/${logoPath}`));
 console.log('  public/                deploy folder (index.html, dist/, assets/)');
+
+// --- checkout/<plan>.html (one page per plan, from the template + plans.json) ---
+const plans = JSON.parse(read('src/checkout/plans.json'));
+const template = read('src/checkout/template.html').trim();
+const escape = (v) => String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const pendingForm = (plan) => `<div class="ff-form-pending"><div><strong>${escape(plan.name)} checkout is almost ready.</strong><p>The order form for this plan is being connected. Check back shortly, or <a href="../#ff-pricing">go back to the plans</a>.</p></div></div>`;
+mkdirSync(p('public/checkout'), { recursive: true });
+mkdirSync(p('dist/checkout'), { recursive: true });
+const checkoutPages = [];
+for (const [key, plan] of Object.entries(plans)) {
+  const fill = {
+    LABEL: escape(plan.label), NAME: escape(plan.name), PRICE: escape(plan.price), FIT: escape(plan.fit),
+    ALLOWANCE: escape(plan.allowance), ALLOWANCE_NOTE: escape(plan.allowance_note),
+    FEATURES: plan.features.map(f => `<li>${escape(f)}</li>`).join(''),
+    STEPS: plan.steps.map(f => `<li>${escape(f)}</li>`).join(''),
+    NOTE: plan.note, // trusted HTML from plans.json (may contain links)
+    FORM: plan.form ? plan.form : pendingForm(plan),
+  };
+  const body = template.replace(/\{\{(\w+)\}\}/g, (_, k) => fill[k] ?? '').split(LOGO_ATTR).join(`src="../${logoPath}"`);
+  const page = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${escape(plan.name)} plan checkout — Flow Fusion</title>
+  <meta name="description" content="Start your Flow Fusion ${escape(plan.name)} subscription at $${escape(plan.price)} per month.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../dist/styles.css">
+  <style>html,body{margin:0;background:#08090b}</style>
+</head>
+<body>
+${body}
+</body>
+</html>
+`;
+  writeFileSync(p(`public/checkout/${key}.html`), page);
+  writeFileSync(p(`dist/checkout/${key}.html`), page);
+  checkoutPages.push(`checkout/${key}${plan.form ? '' : ' (form pending)'}`);
+}
+console.log(`  checkout pages         ${checkoutPages.join(', ')}`);
