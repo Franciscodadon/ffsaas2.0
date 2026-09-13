@@ -6,8 +6,17 @@
     "fit": "A connected home for your leads and follow-up.",
     "allowance": "CRM essentials",
     "allowance_note": "No SMS included. Monthly billing, USD.",
-    "features": ["Contacts and pipelines", "Calendars and booking", "Workflows and automations", "Forms and surveys"],
-    "steps": ["Complete the form to start your Core subscription.", "You receive your workspace login by email.", "Bring in your contacts and set up your first pipeline."],
+    "features": [
+      "Contacts and pipelines",
+      "Calendars and booking",
+      "Workflows and automations",
+      "Forms and surveys"
+    ],
+    "steps": [
+      "Complete the form to start your Core subscription.",
+      "You receive your workspace login by email.",
+      "Bring in your contacts and set up your first pipeline."
+    ],
     "note": "Need texting too? <a href=\"../#ff-pricing\">Compare the SMS plans</a>. Starter, Growth, and Scale add TextVolt messaging and one SMS number.",
     "form": "<iframe src=\"https://api.leadconnectorhq.com/widget/form/KmRrXXAUjyPkNkhE9ye7\" style=\"width:100%;height:100%;border:none;border-radius:8px\" id=\"inline-KmRrXXAUjyPkNkhE9ye7\" data-layout=\"{'id':'INLINE'}\" data-trigger-type=\"alwaysShow\" data-trigger-value=\"\" data-activation-type=\"alwaysActivated\" data-activation-value=\"\" data-deactivation-type=\"neverDeactivate\" data-deactivation-value=\"\" data-form-name=\"$99 Flow Fusion Core\" data-height=\"1024\" data-layout-iframe-id=\"inline-KmRrXXAUjyPkNkhE9ye7\" data-form-id=\"KmRrXXAUjyPkNkhE9ye7\" data-cookie-consent=\"true\" data-cookie-consent-provider=\"auto\" title=\"$99 Flow Fusion Core\"></iframe>"
   },
@@ -18,10 +27,19 @@
     "fit": "For getting your SMS follow-up up and running.",
     "allowance": "5,000 SMS",
     "allowance_note": "Per month, sent and received. Monthly billing, USD.",
-    "features": ["Everything in Core", "TextVolt SMS messaging", "1 SMS number included", "SMS setup support"],
-    "steps": ["Complete the form to start your Starter subscription.", "You receive your workspace login by email.", "We help you set up your texting number and first follow-up."],
+    "features": [
+      "Everything in Core",
+      "TextVolt SMS messaging",
+      "1 SMS number included",
+      "SMS setup support"
+    ],
+    "steps": [
+      "Complete the form to start your Starter subscription.",
+      "You receive your workspace login by email.",
+      "We help you set up your texting number and first follow-up."
+    ],
     "note": "Need more messages? <a href=\"../#ff-pricing\">Growth includes 25,000 SMS</a> per month. Additional SMS numbers are $5 each per month.",
-    "form": ""
+    "form": "<iframe src=\"https://api.leadconnectorhq.com/widget/form/RCFUJjSj0NgXl9iHPsGA\" style=\"width:100%;height:100%;border:none;border-radius:8px\" id=\"inline-RCFUJjSj0NgXl9iHPsGA\" data-layout=\"{'id':'INLINE'}\" data-trigger-type=\"alwaysShow\" data-trigger-value=\"\" data-activation-type=\"alwaysActivated\" data-activation-value=\"\" data-deactivation-type=\"neverDeactivate\" data-deactivation-value=\"\" data-form-name=\"$150 Flow Fusion starter \" data-height=\"953\" data-layout-iframe-id=\"inline-RCFUJjSj0NgXl9iHPsGA\" data-form-id=\"RCFUJjSj0NgXl9iHPsGA\" data-cookie-consent=\"true\" data-cookie-consent-provider=\"auto\" title=\"$150 Flow Fusion starter \"></iframe>"
   },
   "growth": {
     "label": "RECOMMENDED",
@@ -30,8 +48,17 @@
     "fit": "More room for consistent conversations and follow-up.",
     "allowance": "25,000 SMS",
     "allowance_note": "Per month, sent and received. Monthly billing, USD.",
-    "features": ["Everything in Core", "TextVolt SMS messaging", "1 SMS number included", "SMS setup support"],
-    "steps": ["Complete the form to start your Growth subscription.", "You receive your workspace login by email.", "We help you set up your texting number and first follow-up."],
+    "features": [
+      "Everything in Core",
+      "TextVolt SMS messaging",
+      "1 SMS number included",
+      "SMS setup support"
+    ],
+    "steps": [
+      "Complete the form to start your Growth subscription.",
+      "You receive your workspace login by email.",
+      "We help you set up your texting number and first follow-up."
+    ],
     "note": "Higher volume? <a href=\"../#ff-pricing\">Scale includes 50,000 SMS</a> per month. Additional SMS numbers are $5 each per month.",
     "form": ""
   },
@@ -42,8 +69,17 @@
     "fit": "For businesses with a higher monthly messaging volume.",
     "allowance": "50,000 SMS",
     "allowance_note": "Per month, sent and received. Monthly billing, USD.",
-    "features": ["Everything in Core", "TextVolt SMS messaging", "1 SMS number included", "SMS setup support"],
-    "steps": ["Complete the form to start your Scale subscription.", "You receive your workspace login by email.", "We help you set up your texting number and first follow-up."],
+    "features": [
+      "Everything in Core",
+      "TextVolt SMS messaging",
+      "1 SMS number included",
+      "SMS setup support"
+    ],
+    "steps": [
+      "Complete the form to start your Scale subscription.",
+      "You receive your workspace login by email.",
+      "We help you set up your texting number and first follow-up."
+    ],
     "note": "Additional SMS numbers are $5 each per month. TextVolt provides messaging only; calling requires a separate service and number.",
     "form": ""
   }
