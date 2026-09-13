@@ -43,7 +43,7 @@
           <li>Office hours group support — Mon–Fri, 12:00–1:00 PM EST</li>
           <li>24/7 live chat support</li>
         </ul>
-        <a class="ff-onboard-btn" href="#" data-onboard-link="diy">Log in to Flow Fusion and access the resource center</a>
+        <a class="ff-onboard-btn" href="https://app.flowfusion.io/" data-onboard-link="diy">Log in to Flow Fusion and access the resource center</a>
       </article>
       <article class="ff-onboard-card">
         <span class="ff-pill">$150 ONE-TIME</span>
@@ -57,7 +57,7 @@
           <li>Office hours group support — Mon–Fri, 12:00–1:00 PM EST</li>
           <li>24/7 live chat support</li>
         </ul>
-        <a class="ff-onboard-btn" href="#" data-onboard-link="dfy">Get Done For You Onboarding</a>
+        <a class="ff-onboard-btn" href="https://flowfusioncrm.com/onboarding-form" data-onboard-link="dfy">Get Done For You Onboarding</a>
       </article>
     </div>
 
@@ -68,7 +68,7 @@
 </div>
 <script>
   // Set these to the real destinations. Empty values leave the buttons inert.
-  const onboardingLinks = { diy: '', dfy: '' };
+  const onboardingLinks = { diy: 'https://app.flowfusion.io/', dfy: 'https://flowfusioncrm.com/onboarding-form' };
   document.querySelectorAll('[data-onboard-link]').forEach(a => {
     const url = onboardingLinks[a.dataset.onboardLink];
     if (url) a.href = url; else { a.setAttribute('aria-disabled', 'true'); a.addEventListener('click', e => e.preventDefault()); }
