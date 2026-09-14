@@ -95,3 +95,7 @@ Each plan has its own page at `/checkout/<plan>` (`core`, `starter`, `growth`, `
 ## Thank-you page
 
 `/thank-you` is the post-checkout page, built from `src/thank-you.html`: the Loom welcome video, then the Do It Yourself and Done For You onboarding cards. Set each GoHighLevel form's "on submit" redirect to `https://<your-domain>/thank-you`. The two card buttons read their destinations from the `onboardingLinks` object at the bottom of `src/thank-you.html`; until a URL is filled in, that button is inert.
+
+## SMS guide
+
+`/sms` is a plain-language FAQ about texting: opt-ins and consent, sending pace, the single TextVolt number and call forwarding, credits (no rollover, non-refundable), and the customer's responsibility for compliance. Edit `src/sms.html`; it's linked from the home page nav and footer.

@@ -160,3 +160,24 @@ ${thanksFragment}
 writeFileSync(p('public/thank-you.html'), thanksHtml);
 writeFileSync(p('dist/thank-you.html'), thanksHtml);
 console.log('  thank-you              public/thank-you.html');
+
+// --- sms.html (SMS guide) --------------------------------------------------
+const smsFragment = read('src/sms.html').trim().split(LOGO_ATTR).join(`src="${logoPath}"`);
+const smsHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMS guide — Flow Fusion</title>
+  <meta name="description" content="Plain-language answers about texting with Flow Fusion: opt-ins, sending pace, your texting number, credits, and who is responsible for compliance.">
+  <link rel="stylesheet" href="dist/styles.css">
+  <style>html,body{margin:0;background:#08090b}</style>
+</head>
+<body>
+${smsFragment}
+</body>
+</html>
+`;
+writeFileSync(p('public/sms.html'), smsHtml);
+writeFileSync(p('dist/sms.html'), smsHtml);
+console.log('  sms guide              public/sms.html');
