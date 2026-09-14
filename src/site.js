@@ -3,7 +3,7 @@
    Empty values deliberately show a preview notice and never charge a card. */
 (() => {
   'use strict';
-  const checkoutLinks = { core: 'https://link.fastpaydirect.com/payment-link/6aa76e69ceb12d9fc1a8cb32', starter: 'https://link.fastpaydirect.com/payment-link/6aa76f4232f95ae35594a6e8', growth: 'checkout/growth', scale: 'checkout/scale' };
+  const checkoutLinks = { core: 'https://link.fastpaydirect.com/payment-link/6aa76e69ceb12d9fc1a8cb32', starter: 'https://link.fastpaydirect.com/payment-link/6aa76f4232f95ae35594a6e8', growth: 'https://link.fastpaydirect.com/payment-link/6aa76f77ceb12d9fc1a8cb33', scale: 'checkout/scale' };
   const root = document.getElementById('ff-site');
   if (!root || root.dataset.initialized) return;
   root.dataset.initialized = 'true';
