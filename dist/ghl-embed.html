@@ -172,6 +172,12 @@
 #ff-site .ff-bubble-out{align-self:flex-end;background:#2458a8;color:#eff5ff;border-radius:10px 10px 2px 10px}
 #ff-site .ff-message-note{font-size:.75rem;color:#96afd4;align-self:center;margin-top:5px}
 #ff-site .ff-message-note>span{margin-right:8px;color:#97bdff}
+#ff-site .ff-nav-login{font-size:.875rem;font-weight:500;color:#dfe5ef;padding:8px 12px;border:1px solid #333a46;border-radius:5px;min-height:40px;display:inline-flex;align-items:center;transition:color .2s,border-color .2s,background .2s}
+#ff-site .ff-nav-login:hover{color:#fff;border-color:#5b7fc2;background:#151b26}
+@media(max-width:640px){#ff-site .ff-nav-login{font-size:.75rem;padding:7px 9px;min-height:36px}}
+#ff-site .ff-nav-login,#ff-site .ff-nav .ff-btn{white-space:nowrap}
+@media(max-width:640px){#ff-site .ff-nav-actions{gap:7px}#ff-site .ff-nav .ff-btn{padding:9px 10px}}
+@media(max-width:400px){#ff-site .ff-nav .ff-btn{display:none}}
 
 #ff-site .ff-start-section{background:#101216;border-top:1px solid #252a33;border-bottom:1px solid #252a33;margin-top:28px;padding:96px 0}
 #ff-site .ff-onboarding-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;border-top:1px solid #343b46;padding-top:35px}
@@ -310,7 +316,7 @@
       <nav class="ff-nav-links" aria-label="Main navigation" id="ff-menu">
         <a href="#ff-product">The platform</a><a href="#ff-start">Getting started</a><a href="#ff-pricing">Pricing</a><a href="#ff-faq">FAQ</a>
       </nav>
-      <div class="ff-nav-actions"><a class="ff-btn ff-btn-small" href="#ff-pricing">Find your plan <span aria-hidden="true">↗</span></a><button class="ff-menu-toggle" type="button" aria-expanded="false" aria-controls="ff-menu" aria-label="Open navigation"><span></span><span></span></button></div>
+      <div class="ff-nav-actions"><a class="ff-nav-login" href="https://app.flowfusion.io/">Log in</a><a class="ff-btn ff-btn-small" href="#ff-pricing">Find your plan <span aria-hidden="true">↗</span></a><button class="ff-menu-toggle" type="button" aria-expanded="false" aria-controls="ff-menu" aria-label="Open navigation"><span></span><span></span></button></div>
     </div>
     <div class="ff-scroll-line" aria-hidden="true"></div>
   </header>
